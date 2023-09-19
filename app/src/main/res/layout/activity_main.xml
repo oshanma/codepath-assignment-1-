@@ -4,100 +4,117 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity">
+
 
     <androidx.cardview.widget.CardView
         android:id="@+id/profile_card"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="25dp"
-        android:background="@color/card_foreground"
+        android:layout_margin="21dp"
+        android:elevation="20dp"
         app:cardCornerRadius="25dp"
-        android:elevation="20dp">
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="21dp">
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/purple_200">
+
 
             <ImageView
                 android:id="@+id/profile_image"
                 android:layout_width="@dimen/profile_image_size"
                 android:layout_height="@dimen/profile_image_size"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="80dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/profile"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="60dp"
-                android:src="@drawable/avatar_9"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck" />
 
             <TextView
                 android:id="@+id/profile_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/profile_image"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="50dp"
-                tools:text="First Last"
-                android:textSize="24sp"
+                android:textAllCaps="true"
                 android:textColor="@color/black"
+                android:textSize="24sp"
                 android:textStyle="bold"
-                android:textAllCaps="true"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_image"
+                tools:text="Oshan Maharjan" />
 
             <TextView
                 android:id="@+id/profile_bio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/profile_name"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="10dp"
+                android:background="@color/teal_200"
                 android:text="@string/profile_bio_text"
-                android:textSize="16sp"/>
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_name" />
 
             <TextView
                 android:id="@+id/profile_hobby_header"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/profile_bio"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="50dp"
+                android:background="@color/teal_200"
                 android:text="@string/profile_hobby_header_text"
+                android:textColor="@color/black"
                 android:textSize="18sp"
-                android:textColor="@color/black"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_bio" />
 
             <TextView
                 android:id="@+id/profile_hobby_first"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/profile_hobby_header"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="10dp"
+                android:background="@color/teal_200"
                 android:text="@string/profile_hobby_first_text"
-                android:textSize="15sp"/>
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_hobby_header" />
 
             <TextView
                 android:id="@+id/profile_hobby_second"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/profile_hobby_first"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:background="@color/teal_200"
                 android:text="@string/profile_hobby_second_text"
-                android:textSize="15sp"/>
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_hobby_first" />
 
             <TextView
                 android:id="@+id/profile_hobby_third"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/profile_hobby_second"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:background="@color/teal_200"
                 android:text="@string/profile_hobby_third_text"
-                android:textSize="15sp"/>
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_hobby_second" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
